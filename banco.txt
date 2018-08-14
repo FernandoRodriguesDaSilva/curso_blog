@@ -1,0 +1,27 @@
+create database cursoblogprocedural;
+
+create table usuarios(
+id_usuario int not null primary key auto_increment,
+login varchar(50) not null,
+senha varchar(50),
+email varchar(120)
+);
+
+create table categorias(
+id_categoria int not null primary key auto_increment,
+categoria varchar(60),
+slug_categoria varchar(60)
+);
+
+create table posts(
+id_post int not null primary key auto_increment,
+id_categoria int(11),
+post varchar(255),
+slug_post varchar(255),
+imagem varchar(100),
+descricao text,
+views int,
+data date,
+embed_youtube varchar(255),
+ativo varchar(5)
+);
